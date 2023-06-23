@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 125px;
+  padding-left: 300px;
+  height: 3000px;
+}
+
+.clothes-grid {
+  display: grid;
+  grid-template-columns: 210px 210px 210px;
+  column-gap: 100px;
+  row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+  .clothes-grid {
+    grid-template-columns: 210px 210px;
+  }
+  body {
+    padding-left: 125px
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1299px) {
+  .clothes-grid{
+    grid-template-columns: 210px 210px 210px;
+  }
+  body {
+    padding-left: 200px
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+  .clothes-grid {
+    grid-template-columns: 210px 210px 210px 210px;
+  }
+  body {
+    padding-left: 300px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .clothes-grid {
+    grid-template-columns:  210px 210px 210px 210px 210px;
+  }
+  body {
+    padding-left: 320px;
+  }
+}
+
+.clothing {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 210px;
+  justify-content: center;
+  align-content: center;
+  z-index: 3;
+}
+
+.clothing-img {
+  object-fit: cover;
+  height: 210px;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  z-index: 2;
+}
+
+.clothing-img:hover {
+  opacity: 0.8;
+  z-index: 3;
+}
+
+.clothing-img:active {
+  opacity: 0.3
+}
+
+#grey-hoodie {
+  margin-left: 15px;
+}
